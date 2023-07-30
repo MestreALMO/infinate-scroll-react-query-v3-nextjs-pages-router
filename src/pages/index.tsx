@@ -4,9 +4,6 @@ import { useCallback, useMemo, useRef } from "react";
 import Link from "next/link";
 
 export default function Home() {
-  /**
-   * Using the hook
-   */
   const { data, error, fetchNextPage, hasNextPage, isFetching, isLoading } =
     useInfiniteQuery("projects", fetchData, {
       getNextPageParam: (lastPage, pages) => lastPage.offset,
