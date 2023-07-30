@@ -1,5 +1,5 @@
-import axios from 'axios';
-import { QueryFunction } from 'react-query';
+import axios from "axios";
+import { QueryFunction } from "react-query";
 
 export interface ItemDataI {
   name: string;
@@ -10,7 +10,7 @@ interface APIResultsI {
   offset: number | null;
 }
 
-const fetchData: QueryFunction<APIResultsI, 'projects'> = async ({
+const fetchData: QueryFunction<APIResultsI, "projects"> = async ({
   pageParam,
 }) => {
   const offset = pageParam ? pageParam : 0;
